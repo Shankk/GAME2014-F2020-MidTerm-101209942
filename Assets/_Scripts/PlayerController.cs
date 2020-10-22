@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public BulletManager bulletManager;
 
     [Header("Boundary Check")]
-    public float horizontalBoundary;
+    public float verticalBoundary;
 
     [Header("Player Speed")]
     public float horizontalSpeed;
@@ -73,13 +73,13 @@ public class PlayerController : MonoBehaviour
         }
 
         // keyboard support
-        if (Input.GetAxis("Horizontal") >= 0.1f) 
+        if (Input.GetAxis("Vertical") >= 0.1f) 
         {
             // direction is positive
             direction = 1.0f;
         }
 
-        if (Input.GetAxis("Horizontal") <= -0.1f)
+        if (Input.GetAxis("Vertical") <= -0.1f)
         {
             // direction is negative
             direction = -1.0f;
@@ -100,15 +100,15 @@ public class PlayerController : MonoBehaviour
     private void _CheckBounds()
     {
         // check right bounds
-        if (transform.position.x >= horizontalBoundary)
+        if (transform.position.x >= verticalBoundary)
         {
-            transform.position = new Vector3(horizontalBoundary, transform.position.y, 0.0f);
+            transform.position = new Vector3(verticalBoundary, transform.position.y, 0.0f);
         }
 
         // check left bounds
-        if (transform.position.x <= -horizontalBoundary)
+        if (transform.position.x <= -verticalBoundary)
         {
-            transform.position = new Vector3(-horizontalBoundary, transform.position.y, 0.0f);
+            transform.position = new Vector3(-verticalBoundary, transform.position.y, 0.0f);
         }
 
     }
