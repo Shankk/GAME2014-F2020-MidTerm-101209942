@@ -2,6 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// BulletController.cs
+/// Brian Viverios STU# 101209942 Last Modified 10/21/2020
+/// Program Description: Controls the Bullet Objects movement, this includes the speed, rotation and boundary.
+/// Aswell as provide the bullet spawning.
+/// Last Revision: Rearranged The movement to be horizontal instead of vertical to match Landscape mode.
+/// 
+/// </summary>
+
 public class BulletController : MonoBehaviour, IApplyDamage
 {
     public float horizontalSpeed;

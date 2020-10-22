@@ -2,6 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// BackgroundController.cs
+/// Brian Viverios STU# 101209942 Last Modified 10/21/2020
+/// Program Description: Controls the background objects of the scene, this gives the side scrolling illusion.
+/// The Background will scroll to the end of their threshold and then teleport to their original location.
+/// Last Revision: Rearranged The movement to be horizontal instead of vertical to match Landscape mode.
+/// 
+/// </summary>
+
+
 public class BackgroundController : MonoBehaviour
 {
     public float horizontalSpeed;
